@@ -13,7 +13,11 @@
 		8C5D16B41E64239800D4D5A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D16B31E64239800D4D5A6 /* Assets.xcassets */; };
 		8C5D16B71E64239800D4D5A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D16B51E64239800D4D5A6 /* LaunchScreen.storyboard */; };
 		8C5D16C11E64241A00D4D5A6 /* MaxAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C5D16C01E64241A00D4D5A6 /* MaxAlertView.m */; settings = {ASSET_TAGS = (); }; };
-		8C5D16C31E6426F100D4D5A6 /* IMG_4820.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 8C5D16C21E6426F100D4D5A6 /* IMG_4820.PNG */; settings = {ASSET_TAGS = (); }; };
+		8C6F5CBA1E76738B00D29A92 /* MaxAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F5CB91E76738B00D29A92 /* MaxAlertViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8C6F5CBF1E76753400D29A92 /* PopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F5CBE1E76753400D29A92 /* PopUpView.m */; settings = {ASSET_TAGS = (); }; };
+		8C6F5CC21E7680AF00D29A92 /* AlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F5CC11E7680AF00D29A92 /* AlertViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8C6F5CC51E76811E00D29A92 /* ActionSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6F5CC41E76811E00D29A92 /* ActionSheetViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8C78C11E1E6910800005AFD8 /* wode_ydy.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C78C11D1E6910800005AFD8 /* wode_ydy.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +32,16 @@
 		8C5D16B81E64239800D4D5A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C5D16BF1E64241A00D4D5A6 /* MaxAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxAlertView.h; sourceTree = "<group>"; };
 		8C5D16C01E64241A00D4D5A6 /* MaxAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxAlertView.m; sourceTree = "<group>"; };
-		8C5D16C21E6426F100D4D5A6 /* IMG_4820.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_4820.PNG; sourceTree = "<group>"; };
+		8C6F5CB81E76738B00D29A92 /* MaxAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaxAlertViewController.h; sourceTree = "<group>"; };
+		8C6F5CB91E76738B00D29A92 /* MaxAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaxAlertViewController.m; sourceTree = "<group>"; };
+		8C6F5CBB1E7673A900D29A92 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8C6F5CBD1E76753400D29A92 /* PopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpView.h; sourceTree = "<group>"; };
+		8C6F5CBE1E76753400D29A92 /* PopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpView.m; sourceTree = "<group>"; };
+		8C6F5CC01E7680AF00D29A92 /* AlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewController.h; sourceTree = "<group>"; };
+		8C6F5CC11E7680AF00D29A92 /* AlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewController.m; sourceTree = "<group>"; };
+		8C6F5CC31E76811E00D29A92 /* ActionSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetViewController.h; sourceTree = "<group>"; };
+		8C6F5CC41E76811E00D29A92 /* ActionSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetViewController.m; sourceTree = "<group>"; };
+		8C78C11D1E6910800005AFD8 /* wode_ydy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wode_ydy.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +74,19 @@
 		8C5D16A61E64239800D4D5A6 /* MaxAlertView */ = {
 			isa = PBXGroup;
 			children = (
+				8C6F5CBB1E7673A900D29A92 /* Header.h */,
 				8C5D16AA1E64239800D4D5A6 /* AppDelegate.h */,
 				8C5D16AB1E64239800D4D5A6 /* AppDelegate.m */,
 				8C5D16AD1E64239800D4D5A6 /* ViewController.h */,
 				8C5D16AE1E64239800D4D5A6 /* ViewController.m */,
+				8C6F5CB81E76738B00D29A92 /* MaxAlertViewController.h */,
+				8C6F5CB91E76738B00D29A92 /* MaxAlertViewController.m */,
+				8C6F5CC01E7680AF00D29A92 /* AlertViewController.h */,
+				8C6F5CC11E7680AF00D29A92 /* AlertViewController.m */,
+				8C6F5CC31E76811E00D29A92 /* ActionSheetViewController.h */,
+				8C6F5CC41E76811E00D29A92 /* ActionSheetViewController.m */,
 				8C5D16BE1E64240B00D4D5A6 /* MaxAlertView */,
+				8C6F5CBC1E76750C00D29A92 /* PopUpView */,
 				8C5D16B31E64239800D4D5A6 /* Assets.xcassets */,
 				8C5D16B51E64239800D4D5A6 /* LaunchScreen.storyboard */,
 				8C5D16B81E64239800D4D5A6 /* Info.plist */,
@@ -85,11 +106,20 @@
 		8C5D16BE1E64240B00D4D5A6 /* MaxAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				8C5D16C21E6426F100D4D5A6 /* IMG_4820.PNG */,
+				8C78C11D1E6910800005AFD8 /* wode_ydy.png */,
 				8C5D16BF1E64241A00D4D5A6 /* MaxAlertView.h */,
 				8C5D16C01E64241A00D4D5A6 /* MaxAlertView.m */,
 			);
 			path = MaxAlertView;
+			sourceTree = "<group>";
+		};
+		8C6F5CBC1E76750C00D29A92 /* PopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				8C6F5CBD1E76753400D29A92 /* PopUpView.h */,
+				8C6F5CBE1E76753400D29A92 /* PopUpView.m */,
+			);
+			path = PopUpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +153,7 @@
 				TargetAttributes = {
 					8C5D16A31E64239800D4D5A6 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = X3C3UCZ237;
 					};
 				};
 			};
@@ -149,9 +180,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C5D16C31E6426F100D4D5A6 /* IMG_4820.PNG in Resources */,
 				8C5D16B71E64239800D4D5A6 /* LaunchScreen.storyboard in Resources */,
 				8C5D16B41E64239800D4D5A6 /* Assets.xcassets in Resources */,
+				8C78C11E1E6910800005AFD8 /* wode_ydy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5D16AF1E64239800D4D5A6 /* ViewController.m in Sources */,
+				8C6F5CBF1E76753400D29A92 /* PopUpView.m in Sources */,
+				8C6F5CC21E7680AF00D29A92 /* AlertViewController.m in Sources */,
 				8C5D16AC1E64239800D4D5A6 /* AppDelegate.m in Sources */,
+				8C6F5CC51E76811E00D29A92 /* ActionSheetViewController.m in Sources */,
 				8C5D16C11E64241A00D4D5A6 /* MaxAlertView.m in Sources */,
+				8C6F5CBA1E76738B00D29A92 /* MaxAlertViewController.m in Sources */,
 				8C5D16A91E64239800D4D5A6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +302,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MaxAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huati.MaxAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,7 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MaxAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.huati.MaxAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +343,7 @@
 				8C5D16BD1E64239800D4D5A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

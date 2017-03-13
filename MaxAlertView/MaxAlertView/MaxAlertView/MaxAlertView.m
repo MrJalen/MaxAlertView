@@ -180,7 +180,7 @@ static const CGFloat AlertViewButtonHeight = 44;
             _completion = completion;
         }
         
-        [self setupGestures];
+        //[self setupGestures];
         [self resizeViews];
         
         _alertView.center = CGPointMake(CGRectGetMidX(_alertWindow.bounds), CGRectGetMidY(_alertWindow.bounds));

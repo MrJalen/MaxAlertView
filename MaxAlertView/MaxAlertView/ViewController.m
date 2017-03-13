@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import "MaxAlertView.h"
-
-#define KSCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
-#define KSCREEN_HEIGHT  [UIScreen mainScreen].bounds.size.height
+#import "Header.h"
+#import "MaxAlertViewController.h"
+#import "AlertViewController.h"
+#import "ActionSheetViewController.h"
 
 @interface ViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -24,7 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"Usering MaxAlertView";
+    self.title = @"Display";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self createTableView];
@@ -38,7 +38,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 6;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -51,12 +51,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"Cell"];
     }
     
-    cell.textLabel.text = @[@"Title",
-                            @"Title with message",
-                            @"Cancel button",
-                            @"Cancel & Confirm",
-                            @"Cancel & Confirm & ContentView",
-                            @"Cancel block with OK"][indexPath.section];
+    cell.textLabel.text = @[@"Usering MaxAlertView",
+                            @"Usering AlertPopUpView",
+                            @"Usering ActionSheetPopUpView"][indexPath.section];
     
     return cell;
 }
@@ -72,54 +69,31 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *headerView = [UIView new];
     
-    UILabel *tipsLab = [[UILabel alloc] initWithFrame:CGRectMake(10, 15, KSCREEN_WIDTH - 20, 30)];
+    UILabel *tipsLab = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, KSCREEN_WIDTH - 30, 30)];
     tipsLab.textColor = [UIColor lightGrayColor];
     tipsLab.font = [UIFont systemFontOfSize:12];
     tipsLab.numberOfLines = 2;
-    tipsLab.text = @[@"show a title",
-                     @"show title & message",
-                     @"show title & message , at the same time show a cancel button",
-                     @"show title & message , at the same time show a cancel button & confirm button",
-                     @"show title & message , at the same time show a cancel button & confirm button , contentView",
-                     @"show title & message , at the same time show a cancel block with OK"][section];
+    tipsLab.text = @[@"Usering MaxAlertView，Six kinds of style with Alert",
+                     @"Usering AlertPopUpView，Four kinds of style with Alert",
+                     @"Usering ActionSheetPopUpView，Four kinds of style with ActionSheet"][section];
     [headerView addSubview:tipsLab];
     
     return headerView;
 }
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        [MaxAlertView showAlertWithTitle:@"AlertView show Title"];
+        //
+        [self.navigationController pushViewController:[[MaxAlertViewController alloc] init] animated:YES];
     }else if (indexPath.section == 1) {
-        [MaxAlertView showAlertWithTitle:@"Title" message:@"AlertView show Title with message"];
-    }else if (indexPath.section == 2) {
-        [MaxAlertView showAlertWithTitle:@"Title" message:@"AlertView show Title with message" cancelTitle:@"cancel" completion:^(BOOL cancelled) {
-            NSLog(@"cancel");
-        }];
-    }else if (indexPath.section == 3) {
-        [MaxAlertView showAlertWithTitle:@"Title" message:@"AlertView show Title with message" cancelTitle:@"cancel" otherTitle:@"confirm" completion:^(BOOL cancelled) {
-            if (cancelled) {
-                NSLog(@"cancel");
-            }else {
-                NSLog(@"confirm");
-            }
-        }];
-    }else if (indexPath.section == 4) {
-        [MaxAlertView showAlertWithTitle:@"Title" message:@"AlertView show Title with message" cancelTitle:@"cancel" otherTitle:@"confirm" contentView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wode_ydy"]] completion:^(BOOL cancelled) {
-            if (cancelled) {
-                NSLog(@"cancel");
-            }else {
-                NSLog(@"confirm");
-            }
-        }];
-    }else if (indexPath.section == 5) {
-        [MaxAlertView showAlertWithTitle:@"Title" message:@"AlertView show Title with message" completion:^(BOOL cancelled) {
-            if (cancelled) {
-                NSLog(@"ok");
-            }
-        }];
+        //
+        [self.navigationController pushViewController:[[AlertViewController alloc] init] animated:YES];
+    }else {
+        //
+        [self.navigationController pushViewController:[[ActionSheetViewController alloc] init] animated:YES];
     }
 }
 
