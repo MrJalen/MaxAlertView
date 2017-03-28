@@ -241,7 +241,7 @@ alpha:(alphaValue)]
 - (void)configureAndLayoutTitleLabel {
     if (_title_Configuration) {
         CGFloat left_padding = 25;
-        CGFloat labelWidth = _contentWidth-left_padding-left_padding;
+        CGFloat labelWidth = _contentWidth - left_padding*2;
         _titleLabel.text = _title_Configuration.text;
         _titleLabel.textColor = _title_Configuration.textColor;
         _titleLabel.font = [UIFont systemFontOfSize:_title_Configuration.fontSize];
@@ -249,6 +249,8 @@ alpha:(alphaValue)]
         CGFloat top = _title_Configuration.top;
         CGSize titleSize = [_titleLabel.text boundingRectWithSize:CGSizeMake(labelWidth, 250) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : _titleLabel.font} context:nil].size;
         _titleLabel.frame = CGRectMake(left_padding, top, labelWidth, titleSize.height);
+    }else {
+        _titleLabel.frame = CGRectMake(0, 0, 0, 0);
     }
 }
 
@@ -256,7 +258,7 @@ alpha:(alphaValue)]
 - (void)configureAndLayoutMsgLabel {
     if (_msg_configuration) {
         CGFloat left_padding = 25;
-        CGFloat labelWidth = _contentWidth-left_padding-left_padding;
+        CGFloat labelWidth = _contentWidth - left_padding*2;
         _messageLabel.text = _msg_configuration.text;
         _messageLabel.textColor = _msg_configuration.textColor;
         _messageLabel.font = [UIFont systemFontOfSize:_msg_configuration.fontSize];
@@ -264,6 +266,8 @@ alpha:(alphaValue)]
         CGFloat top = CGRectGetMaxY(_titleLabel.frame) + _title_Configuration.bottom + _msg_configuration.top;
         CGSize msgSize = [_messageLabel.text boundingRectWithSize:CGSizeMake(labelWidth, 250) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : _messageLabel.font} context:nil].size;
         _messageLabel.frame = CGRectMake(left_padding, top, labelWidth, msgSize.height);
+    }else {
+        _messageLabel.frame = CGRectMake(0, 0, 0, 0);
     }
 }
 
@@ -478,7 +482,6 @@ alpha:(alphaValue)]
             if (_msg_configuration.bottom == 0) {
                 _msg_configuration.bottom = 15.0;
             }
-        }else {
         }
     }
 }
@@ -491,7 +494,7 @@ alpha:(alphaValue)]
         if (_title_Configuration) {
             height = CGRectGetMaxY(_titleLabel.frame) + _title_Configuration.bottom;
         }else {
-            height = 15.0;
+            height = 0.0;
         }
     }
     return height;

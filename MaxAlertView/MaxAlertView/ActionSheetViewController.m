@@ -85,7 +85,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        PopUpView *popUpView = [[PopUpView alloc] initWithTitle:@"Title" message:@"AlertPopUpView show Title with message"];
+        PopUpView *popUpView = [[PopUpView alloc] initWithTitle:nil message:nil];
         
         [popUpView addBtnWithTitle:@"cancel" type:JLPopUpBtnStyleCancel handler:^{
             NSLog(@"cancel");
